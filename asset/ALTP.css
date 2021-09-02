@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+.Img {
+    width: 100%;
+    height: 100%;
+}
+
+.image_log {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.btn_login {
+    position: absolute;
+    top: 20%;
+    /* transform: translateY(-50%); */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: gray;
+    color: honeydew;
+    cursor: pointer;
+}
+
+.btn {
+    width: 40%;
+    height: 40px;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.input {
+    padding: 0 20px;
+    height: 40px;
+    width: 100%;
+    border-radius: 25px;
+    outline: none;
+}
+
+
+/* ---------------------------- Giao diện chính --------------------------- */
+
+.content {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.IMG {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.IMG img {
+    width: 100%;
+    height: 100%;
+}
+
+.moc_tien {
+    width: calc(1/3 * 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid rgb(26, 25, 25);
+    display: flex;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-wrap: wrap;
+}
+
+.question {
+    width: calc(2/3 * 100%);
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lable1 {
+    display: flex;
+    color: black;
+    width: 300px;
+    background-color: wheat;
+    height: 40px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_question {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    height: 140px;
+    justify-content: center;
+}
+
+.btn-top {
+    display: flex;
+    height: 100%;
+}
+
+.btn_Q:hover {
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+}
+
+.btn_Q {
+    width: 50%;
+    margin: 10px;
+    border-radius: 10px;
+    height: 40%;
+}
+
+.btn-bot {
+    display: flex;
+    height: 100%;
+}
+
+.help::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    width: 80%;
+    height: 1px;
+    border: 1px solid rgb(168, 162, 162);
+}
+
+.help {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Help_btn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: translateY(3px);
+}
+
+.Help_btn {
+    width: 20%;
+    height: 60%;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 3px 4px #ccc;
+    background-color: gray;
+}
+
+.Help_icon {
+    color: white;
+    font-size: 25px;
+}
+
+
+/* -------------------------bonus------------------------------ */
+
+.bonus {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+
+.bonus-list {}
+
+.bonus-item.active {
+    background-color: rgba(168, 233, 114, 0.6);
+    border-radius: 5px
+}
+
+.bonus-item {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bonus-link {
+    color: tomato;
+    font-size: 30px;
+    font-weight: 650;
+}
+
+.bonus-link1 {
+    color: tomato;
+    font-size: 30px;
+    font-weight: 650;
+    display: flex;
+    justify-content: flex-start;
+    width: 140px;
+}
