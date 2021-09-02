@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ai Là Triệu Phú</title>
-    <link rel="stylesheet" href="./asset/ALTP.css">
-    <link rel="stylesheet" href="./asset/reponsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./asset/fontAwesome/fontawesome-free-5.15.4-web/css/all.min.css">
-
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai là triệu phú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./asset/fontAwesome/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+  </head>
+  <body>
     <div class="app">
+      <div class="welcome__start">
+        <button class="btn btn-primary" id="play-btn">Chơi Ngay</button>
+      </div>
 
-        <div class="image_log">
-            <img src="./asset/img/Altp_tvh_ss2.png" class="Img">
-            <div class="btn_login">
-                <button class="btn btn1">Chơi mới</button>
-                <input type="text" class="input" placeholder=" Nhập tên người chơi">
-            </div>
+      <div class="modal">
+        <div class="modal__body flex">
+          <h3>Vui lòng nhập tên người dùng để bắt đầu!</h3>
 
+          <div class="form-group flex">
+            <input
+              type="text"
+              name=""
+              placeholder="Nhập tên của bạn..."
+              class="txtName"
+              id=""
+            />
+
+            <button class="btn btn-primary">Bắt đầu</button>
+          </div>
         </div>
-
+      </div>
     </div>
-</body>
 
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

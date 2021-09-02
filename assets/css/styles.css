@@ -1,0 +1,74 @@
+.app {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.welcome__start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  border: 2px solid var(--secondary-color);
+}
+
+.modal {
+  position: absolute;
+  top: 50px;
+  left: 26%;
+  right: -30%;
+
+  background-color: var(--white);
+  width: 50%;
+  height: 50%;
+
+  border-radius: 2.8rem;
+
+  padding: 2.4rem;
+
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.modal__body {
+  flex-direction: column;
+}
+
+.modal__body h3 {
+  font-size: 1.8rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.form-group {
+  margin-top: 2.4rem;
+  flex-direction: column;
+}
+
+.txtName {
+  border: 1px solid #ccc;
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  width: 100%;
+  outline: none;
+
+  font-size: 1.6rem;
+  color: var(--text);
+
+  margin-bottom: 2.6rem;
+}
+
+.txtName:hover {
+  border: 2px solid var(--primary-color);
+}

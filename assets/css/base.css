@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #1746b2;
+  --secondary-color: #c92d8e;
+  --white: #ffffff;
+  --black: #000000;
+  --text: #333333;
+}
+
+/* RESET CSS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  /* user-select: none;
+  pointer-events: none; */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url("../img/bg_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.btn {
+  width: 280px;
+  padding: 1.2rem 2.4rem;
+  border-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  transform: scale(1);
+}
