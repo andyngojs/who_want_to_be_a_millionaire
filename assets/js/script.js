@@ -21,22 +21,27 @@ function playHandler(nameUser) {
     modal.classList.add("show");
   });
 
-  startBtn.addEventListener("click", () => {
-    welcomeSection.classList.add("hide");
-    playSection.classList.remove("hide");
-    modal.classList.remove("show");
+  startBtn.addEventListener("click", (e) => {
+    if (nameUser.length > 0) {
+      welcomeSection.classList.add("hide");
+      playSection.classList.remove("hide");
+      modal.classList.remove("show");
 
-    setConfig("Name", nameUser);
-    const namePlayer = JSON.parse(
-      localStorage.getItem("GAME_MILLIONAIRE")
-    ).Name;
-    $(".name-user").innerHTML = namePlayer;
+      setConfig("Name", nameUser);
+      const namePlayer = JSON.parse(
+        localStorage.getItem("GAME_MILLIONAIRE")
+      ).Name;
+      $(".name-user").innerHTML = namePlayer;
+    } else {
+      e.preventDefault();
+    }
   });
 }
 
 function userHandler() {
   inputName.addEventListener("change", (e) => {
     const userName = e.target.value;
+    if (userName.length > 0) startBtn.classList.remove("btn-disable");
     playHandler(userName);
   });
 }

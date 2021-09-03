@@ -69,3 +69,9 @@ body {
 .hide {
   display: none !important;
 }
+
+.btn-disable {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  border: none !important;
+}
