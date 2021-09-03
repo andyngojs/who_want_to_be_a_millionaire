@@ -31,8 +31,8 @@ ul {
 html {
   font-family: "Poppins", sans-serif;
   font-size: 62.5%;
-  /* user-select: none;
-  pointer-events: none; */
+  user-select: none;
+  /* pointer-events: none;  */
 }
 
 body {
@@ -63,7 +63,7 @@ body {
 }
 
 .show {
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 
 .hide {

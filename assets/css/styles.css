@@ -185,8 +185,16 @@
   color: var(--text);
 }
 
+.pin-money__item i {
+  font-size: 1.8rem;
+}
+
 .pin-money__item.active {
   background-color: var(--secondary-color);
   color: var(--white);
   border-radius: 1.2rem;
+}
+
+.money-label {
+  margin-left: 2.8rem;
 }

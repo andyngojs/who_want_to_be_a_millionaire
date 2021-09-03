@@ -13,7 +13,7 @@
     />
     <link
       rel="stylesheet"
-      href="./asset/fontAwesome/fontawesome-free-5.15.4-web/css/all.min.css"
+      href="./assets/fonts/fontAwesome/fontawesome-free-5.15.4-web/css/all.min.css"
     />
     <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
@@ -23,12 +23,12 @@
   <body>
     <div class="app">
       <!-- Welcome Section -->
-      <div class="welcome__start hide">
+      <div class="welcome__start">
         <button class="btn btn-primary" id="play-btn">Chơi Ngay</button>
       </div>
 
       <!-- Main Section -->
-      <div class="play-container">
+      <div class="play-container hide">
         <div class="grid wide">
           <div class="row height-100">
             <div class="col l-8 m-12 c-12">
@@ -63,21 +63,80 @@
             <div class="col l-4 m-12 c-0 mg-top">
               <div class="container__moneylist">
                 <ul class="pin-money__list">
-                  <li class="pin-money__item">15</li>
-                  <li class="pin-money__item">14</li>
-                  <li class="pin-money__item">13</li>
-                  <li class="pin-money__item">12</li>
-                  <li class="pin-money__item">11</li>
-                  <li class="pin-money__item">10</li>
-                  <li class="pin-money__item">9</li>
-                  <li class="pin-money__item">8</li>
-                  <li class="pin-money__item">7</li>
-                  <li class="pin-money__item">6</li>
-                  <li class="pin-money__item">5</li>
-                  <li class="pin-money__item">4</li>
-                  <li class="pin-money__item">3</li>
-                  <li class="pin-money__item">2</li>
-                  <li class="pin-money__item active">1</li>
+                  <li class="pin-money__item">
+                    15
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    14
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    13
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    12
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    11
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    10
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    9
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    8
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    7
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    6
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    5
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    4
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    3
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    2
+                    <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item active">
+                    1 <span class="money-label"></span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -96,7 +155,7 @@
               class="txtName"
               id=""
             />
-            <button class="btn btn-primary">Bắt đầu</button>
+            <button class="btn btn-primary btn-start">Bắt đầu</button>
           </div>
         </div>
       </div>
