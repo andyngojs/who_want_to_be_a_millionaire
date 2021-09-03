@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ai là triệu phú</title>
+    <title>Who Want To Be A Millionaire</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,17 +15,75 @@
       rel="stylesheet"
       href="./asset/fontAwesome/fontawesome-free-5.15.4-web/css/all.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/reponsive.css" />
-    <link rel="stylesheet" href="./assets/css/base.css" />
   </head>
   <body>
     <div class="app">
-      <div class="welcome__start">
+      <!-- Welcome Section -->
+      <div class="welcome__start hide">
         <button class="btn btn-primary" id="play-btn">Chơi Ngay</button>
       </div>
 
-      <div class="play-container hide"></div>
+      <!-- Main Section -->
+      <div class="play-container">
+        <div class="grid wide">
+          <div class="row height-100">
+            <div class="col l-8 m-12 c-12">
+              <h2 class="name-player">Xin Chào, <span>---</span></h2>
+
+              <div class="time-count">
+                <div class="time-number">30</div>
+              </div>
+
+              <div class="container">
+                <div class="question__box">
+                  <h2>Cau 1: Demo</h2>
+                </div>
+
+                <div class="answer__box">
+                  <div class="btn btn-answer answer__item">
+                    <span>A</span>
+                  </div>
+                  <div class="btn btn-answer answer__item">
+                    <span>B</span>
+                  </div>
+                  <div class="btn btn-answer answer__item">
+                    <span>C</span>
+                  </div>
+                  <div class="btn btn-answer answer__item">
+                    <span>D</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col l-4 m-12 c-0 mg-top">
+              <div class="container__moneylist">
+                <ul class="pin-money__list">
+                  <li class="pin-money__item">15</li>
+                  <li class="pin-money__item">14</li>
+                  <li class="pin-money__item">13</li>
+                  <li class="pin-money__item">12</li>
+                  <li class="pin-money__item">11</li>
+                  <li class="pin-money__item">10</li>
+                  <li class="pin-money__item">9</li>
+                  <li class="pin-money__item">8</li>
+                  <li class="pin-money__item">7</li>
+                  <li class="pin-money__item">6</li>
+                  <li class="pin-money__item">5</li>
+                  <li class="pin-money__item">4</li>
+                  <li class="pin-money__item">3</li>
+                  <li class="pin-money__item">2</li>
+                  <li class="pin-money__item active">1</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="modal">
         <div class="modal__body flex">

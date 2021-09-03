@@ -1,4 +1,4 @@
-# Game Ai là triệu phú - DobeeTeam
+# Game Who Want To Be A Millionaire - DobeeTeam
 
 ## Member:
 

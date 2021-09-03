@@ -13,6 +13,7 @@
 }
 
 .btn-primary {
+  width: 280px;
   background-color: var(--primary-color);
   color: var(--white);
   font-size: 1.6rem;
@@ -71,4 +72,121 @@
 
 .txtName:hover {
   border: 2px solid var(--primary-color);
+}
+
+/* Play page */
+.play-container {
+  margin-top: 1.8rem;
+  height: 100%;
+}
+
+.name-player {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2.4rem;
+  padding: 1.6rem 0;
+
+  text-align: center;
+}
+
+.time-count {
+  border: 2px solid var(--white);
+  border-radius: 2.8rem;
+  padding: 1.6rem;
+  width: 10%;
+}
+
+.time-count .time-number {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.container {
+  height: 50%;
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+  top: 25%;
+}
+
+.question__box {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+
+  border-top-left-radius: 4.5rem;
+  border-bottom-right-radius: 4.5rem;
+}
+
+.question__box h2 {
+  text-align: center;
+  margin-top: 2.6rem;
+  font-size: 2.2rem;
+}
+
+.answer__box {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 14px;
+  margin: 5rem 0;
+  width: 100%;
+}
+
+.answer__item span {
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+
+.btn-answer {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--white);
+
+  font-size: 1.4rem;
+  padding: 1.4rem;
+}
+
+.btn-answer:hover {
+  background-color: var(--secondary-color);
+}
+
+.container__moneylist {
+  background-color: var(--white);
+  color: var(--text);
+  height: 90%;
+  padding: 1.4rem;
+
+  border-radius: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pin-money__list {
+  margin: auto 0;
+  padding: 1.4rem;
+
+  width: 100%;
+}
+
+.pin-money__item {
+  padding: 0.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.pin-money__item.active {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-radius: 1.2rem;
 }
