@@ -20,10 +20,10 @@ const questions = [
   {
     question: "Ai là nhà sáng lập facebook?",
     answers: [
-      { text: "Bill Gates", correct: false },
-      { text: "Mark Zuckerberg", correct: true },
-      { text: "Jeff Bezos", correct: false },
-      { text: "Lary Page", correct: false },
+      { text: "A. Bill Gates", correct: false },
+      { text: "B. Mark Zuckerberg", correct: true },
+      { text: "C. Jeff Bezos", correct: false },
+      { text: "D. Lary Page", correct: false },
     ],
   },
   {
@@ -144,3 +144,4 @@ const questions = [
     ],
   },
 ];
+

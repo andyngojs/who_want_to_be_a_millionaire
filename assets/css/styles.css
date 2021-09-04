@@ -125,7 +125,8 @@
   border-bottom-right-radius: 4.5rem;
 }
 
-.question__box h2 {
+#question {
+  color: #fff;
   text-align: center;
   margin-top: 2.6rem;
   font-size: 2.2rem;
