@@ -135,19 +135,18 @@
 .answer__box {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  margin: 5rem 0 ;
+  margin: 5rem 0;
   gap: 14px;
   width: 100%;
 }
 
-
-#btn-answers { 
+#btn-answers {
   width: 100%;
   color: var(--white);
   font-size: 1.4rem;
   padding: 1.4rem;
 }
-.btn{
+.btn {
   background-color: var(--primary-color);
 }
 
@@ -195,4 +194,35 @@
 
 .money-label {
   margin-left: 2.8rem;
+}
+
+/* Notification */
+
+.modal-notification {
+  position: absolute;
+  top: 50px;
+  left: 26%;
+  right: -30%;
+
+  background-color: var(--white);
+  width: 50%;
+  height: 50%;
+
+  border-radius: 2.8rem;
+
+  padding: 2.4rem;
+
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.modal__content {
+  flex-direction: column;
+}
+
+.message {
+  font-size: 1.8rem;
+  color: var(--text);
+  padding: 1.6rem 0;
+  margin: 1.3rem 0;
 }

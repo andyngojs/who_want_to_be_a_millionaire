@@ -4,6 +4,8 @@
   --white: #ffffff;
   --black: #000000;
   --text: #333333;
+  --correct-btn: #26bd53;
+  --wrong-btn: #d62413;
 }
 
 /* RESET CSS */
@@ -79,4 +81,22 @@ body {
   background-color: #ccc !important;
   cursor: not-allowed;
   border: none !important;
+}
+
+.wrong-btn {
+  background-color: var(--wrong-btn) !important;
+}
+
+.blink-btn {
+  animation: blinkBtn 0.5s ease infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes blinkBtn {
+  0% {
+    background-color: var(--secondary-color);
+  }
+  50% {
+    background-color: var(--correct-btn);
+  }
 }
