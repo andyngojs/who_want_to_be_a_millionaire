@@ -135,26 +135,26 @@
 .answer__box {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  margin: 5rem 0 ;
   gap: 14px;
-  margin: 5rem 0;
+  
   width: 100%;
 }
 
-.answer__item span {
-  font-weight: 700;
-  font-size: 2.1rem;
-}
 
-.btn-answer {
+#btn-answers {
+ 
   width: 100%;
-  background-color: var(--primary-color);
+ 
   color: var(--white);
-
   font-size: 1.4rem;
   padding: 1.4rem;
 }
+.btn{
+  background-color: var(--primary-color);
+}
 
-.btn-answer:hover {
+.btn:hover {
   background-color: var(--secondary-color);
 }
 

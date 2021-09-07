@@ -10,7 +10,13 @@ let playSection = $(".play-container");
 let modal = $(".modal");
 let inputName = $(".txtName");
 let questionElement = $("#question");
-let answerButtonsElement = $(".btn-answer");
+let answerButtonsElementone= $("#answer_1");
+let answerButtonsElementtwo= $("#answer_2");
+let answerButtonsElementthree= $("#answer_3");
+let answerButtonsElementfour= $("#answer_4");
+
+
+
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -52,7 +58,12 @@ function playHandler(nameUser) {
 function showQuestion(questions) {
   // Show question
   questionElement.innerHTML = questions.question;
+  answerButtonsElementone.innerHTML = questions.answers[0];
+  answerButtonsElementtwo.innerHTML = questions.answers[1];
+  answerButtonsElementthree.innerHTML = questions.answers[2];
+  answerButtonsElementfour.innerHTML = questions.answers[3];
 }
+
 
 function selectAnswer(e) {}
 
