@@ -137,15 +137,12 @@
   grid-template-columns: repeat(2, auto);
   margin: 5rem 0 ;
   gap: 14px;
-  
   width: 100%;
 }
 
 
-#btn-answers {
- 
+#btn-answers { 
   width: 100%;
- 
   color: var(--white);
   font-size: 1.4rem;
   padding: 1.4rem;

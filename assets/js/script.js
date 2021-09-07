@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-let bgMusic = new Audio("./assets/music/music-start.mp3");
+let bgMusic = new Audio("./assets/music/music-wait.mp3");
 
 let playBtn = $("#play-btn");
 let startBtn = $(".btn-start");
@@ -21,7 +21,7 @@ function startGame() {
 
 function playHandler(nameUser) {
   playBtn.addEventListener("click", () => {
-    //bgMusic.play();
+    bgMusic.play();
     modal.classList.add("show");
   });
 
