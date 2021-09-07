@@ -37,7 +37,7 @@ const questions = [
   {
     question: "Us Open là giải đấu tennis được tổ chức ở quốc gia nào?",
     answers: ["A. Mỹ", "B. Australia", "C. Pháp", "D. Anh"],
-    correct: 1,
+    correct: 0,
   },
   {
     question: "Quân Sĩ chỉ có trong bộ cờ nào?",
@@ -98,7 +98,7 @@ const questions = [
       "C. Đề Thám",
       "D. Đề Nắm",
     ],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "World Cup 2018 được tổ chức ở quốc gia nào?",
@@ -109,7 +109,7 @@ const questions = [
     question:
       "Trên la bàn, kim chỉ hướng Đông hợp với kim chỉ hướng Nam 1 góc bao nhiêu độ ?",
     answers: ["A. 45 độ", "B. 90 độ", "C. 120 độ", "D. 180 độ"],
-    correct: 2,
+    correct: 1,
   },
   {
     question: "Rét nàng Bân ở nước ta thường xảy ra vào tháng mấy âm lịch?",
