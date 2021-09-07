@@ -10,13 +10,7 @@ let playSection = $(".play-container");
 let modal = $(".modal");
 let inputName = $(".txtName");
 let questionElement = $("#question");
-let answerButtonsElementone= $("#answer_1");
-let answerButtonsElementtwo= $("#answer_2");
-let answerButtonsElementthree= $("#answer_3");
-let answerButtonsElementfour= $("#answer_4");
-
-
-
+let answerBox = $(".answer__box");
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -58,14 +52,15 @@ function playHandler(nameUser) {
 function showQuestion(questions) {
   // Show question
   questionElement.innerHTML = questions.question;
-  answerButtonsElementone.innerHTML = questions.answers[0];
-  answerButtonsElementtwo.innerHTML = questions.answers[1];
-  answerButtonsElementthree.innerHTML = questions.answers[2];
-  answerButtonsElementfour.innerHTML = questions.answers[3];
+  showAnswer(questions);
 }
 
-
-function selectAnswer(e) {}
+function showAnswer(questions) {
+  const htmls = questions.answers.map((item, index) => {
+    return `<div class="btn" id="answer_1" data-correct=${index}>${item}</div>`;
+  });
+  answerBox.innerHTML = htmls.join("");
+}
 
 function setNextQuestion() {
   showQuestion(shuffledQuestions[currentQuestionIndex]);
