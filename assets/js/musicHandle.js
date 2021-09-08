@@ -1,6 +1,6 @@
 export function beginMusic(music) {
   music.play();
-  music.volume = 0.4;
+  music.volume = 0.2;
 }
 
 export function loadedMusic(music) {

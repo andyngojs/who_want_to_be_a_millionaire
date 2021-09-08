@@ -23,7 +23,7 @@ let modalContent = $(".modal__content");
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
-  // beginMusic(bgMusic);
+  beginMusic(bgMusic);
   playHandler();
   userHandler();
 }
