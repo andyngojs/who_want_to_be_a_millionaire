@@ -1,6 +1,9 @@
+import { beginMusic, loadedMusic, endMusic } from "./musicHandle.js";
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+const bgMusic = new Audio("./assets/music/music-start.mp3");
 const startMusic = new Audio("./assets/music/music-wait.mp3");
 const correctMusic = new Audio("./assets/music/music-correct.mp3");
 const wrongMusic = new Audio("./assets/music/music-wrong.mp3");
@@ -20,13 +23,14 @@ let modalContent = $(".modal__content");
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
+  // beginMusic(bgMusic);
   playHandler();
   userHandler();
 }
 
 function playHandler(nameUser) {
   playBtn.addEventListener("click", () => {
-    startMusic.play();
+    beginMusic(startMusic);
     modal.classList.add("show");
   });
 
@@ -76,7 +80,7 @@ function selectAnswer() {
       let dataCorrect = item.getAttribute("data-correct");
       let isCorrect = false;
       if (dataCorrect == correctCurrent) {
-        correctMusic.play();
+        beginMusic(correctMusic);
         isCorrect = true;
         setStatus(item, isCorrect);
 
@@ -85,7 +89,7 @@ function selectAnswer() {
           setNextQuestion();
         }, 4000);
       } else {
-        wrongMusic.play();
+        beginMusic(wrongMusic);
         setStatus(item, isCorrect);
         wrongAnswerHandler();
       }
@@ -94,6 +98,8 @@ function selectAnswer() {
 }
 
 function setNextQuestion() {
+  endMusic(correctMusic);
+  loadedMusic(correctMusic);
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   selectAnswer();
   jumpLevelHandler();
@@ -117,10 +123,11 @@ function jumpLevelHandler() {
 function wrongAnswerHandler() {
   let money = JSON.parse(localStorage.getItem("GAME_MILLIONAIRE")).Money;
   modalNoti.classList.add("show");
+  console.log(modalNoti.classList.length);
 
   modalContent.innerHTML = `<h3>Rất Tiếc! Bạn đã Thua :(</h3>
   <p class='message' >Bạn ra về với số tiền ${money}$</p>
-  <button class='btn btn-primary' onclick='resetGame()' >Quay về màn chính</button>
+  <button class='btn btn-primary' onclick='${ResetGame()}'>Quay về màn chính</button>
   `;
 }
 
@@ -138,11 +145,13 @@ function setStatus(element, correct) {
     : element.classList.add("wrong-btn");
 }
 
-function resetGame() {
-  welcomeSection.classList.remove("hide");
-  playSection.classList.add("hide");
+function ResetGame() {
+  setTimeout(() => {
+    modalNoti.classList.remove("show");
 
-  modalNoti.classList.remove("show");
+    welcomeSection.classList.remove("hide");
+    playSection.classList.add("hide");
+  }, 5000);
 }
 
 startGame();
