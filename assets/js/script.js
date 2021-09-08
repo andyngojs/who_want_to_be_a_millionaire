@@ -1,4 +1,5 @@
 import { beginMusic, loadedMusic, endMusic } from "./musicHandle.js";
+import CountTime from "./countTime.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -19,11 +20,12 @@ let answerBox = $(".answer__box");
 let pinMoneys = $$(".pin-money__item");
 let modalNoti = $(".modal-notification");
 let modalContent = $(".modal__content");
+let timeCount = $(".time-number");
 
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
-  beginMusic(bgMusic);
+  // beginMusic(bgMusic);
   playHandler();
   userHandler();
 }
@@ -62,6 +64,7 @@ function showQuestion(questions) {
   // Show question
   questionElement.innerHTML = questions.question;
   showAnswer(questions);
+  CountTime(timeCount, 1000);
 }
 
 function showAnswer(questions) {
