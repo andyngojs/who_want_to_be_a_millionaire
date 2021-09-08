@@ -2,12 +2,22 @@
 
 ## Member:
 
-- [Đông Ngô](https://github.com/andyngojs)
+- [Dong Ngo](https://github.com/andyngojs)
 
-- [Đức Trần](https://github.com/tranmanhduc-mg)
+- [Duc Tran](https://github.com/tranmanhduc-mg)
 
-- [Kỳ Anh](https://github.com/nguyenkyanh1101)
+- [Nguyen Ky Anh](https://github.com/nguyenkyanh1101)
+
+## Preview
+
+![Begin Section](./assets/img/preview1.jpg)
+
+![Play Section](./assets/img/preview2.jpg)
 
 ## Join Us
 
 Group Community: [Dobee Community](http://fb.com/groups/dobeeteam.community)
+
+## Note
+
+If you see good and interesting then let's **STAR** this repository and press FOLLOW this repository owner !

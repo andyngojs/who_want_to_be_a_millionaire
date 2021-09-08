@@ -1,6 +1,5 @@
 .app {
   position: relative;
-  overflow: hidden;
   height: 100%;
 }
 
@@ -8,8 +7,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
   height: 100%;
+}
+
+.footer {
+  position: relative;
+  bottom: -300px;
+}
+
+.copyright-txt {
+  font-size: 1.6rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.copyright-txt > a:hover {
+  color: var(--primary-color);
 }
 
 .btn-primary {
@@ -225,4 +239,59 @@
   color: var(--text);
   padding: 1.6rem 0;
   margin: 1.3rem 0;
+}
+
+/* RESPONSIVE */
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .app {
+    overflow-y: scroll;
+  }
+  .container__moneylist {
+    height: 100%;
+    justify-content: center;
+  }
+  .mg-top {
+    margin-top: 1.8rem;
+  }
+  .question__box {
+    padding: 2.8rem 0;
+  }
+  .question__box h2 {
+    margin-top: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .modal {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .time-count {
+    margin: 0 auto;
+    width: 20%;
+    padding: 1.2rem;
+  }
+  .question__box {
+    padding: 2.8rem 0;
+  }
+  .question__box h2 {
+    margin-top: 0;
+  }
+  .answer__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-notification {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .footer {
+    bottom: -250px;
+  }
 }
