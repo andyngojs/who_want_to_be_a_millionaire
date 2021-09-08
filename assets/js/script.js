@@ -19,11 +19,12 @@ let answerBox = $(".answer__box");
 let pinMoneys = $$(".pin-money__item");
 let modalNoti = $(".modal-notification");
 let modalContent = $(".modal__content");
+let timeCount = $(".time-number");
 
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
-  // beginMusic(bgMusic);
+   //beginMusic(bgMusic);
   playHandler();
   userHandler();
 }
@@ -73,6 +74,8 @@ function showAnswer(questions) {
   correctCurrent = questions.correct;
 }
 
+
+
 function selectAnswer() {
   let answers = $$("#answer_1");
   answers.forEach((item) => {
@@ -87,7 +90,7 @@ function selectAnswer() {
         setTimeout(() => {
           currentQuestionIndex++;
           setNextQuestion();
-        }, 4000);
+        }, 6000);
       } else {
         beginMusic(wrongMusic);
         setStatus(item, isCorrect);
@@ -97,12 +100,15 @@ function selectAnswer() {
   });
 }
 
+
+
 function setNextQuestion() {
   endMusic(correctMusic);
   loadedMusic(correctMusic);
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   selectAnswer();
   jumpLevelHandler();
+  
 }
 
 function jumpLevelHandler() {
@@ -119,6 +125,8 @@ function jumpLevelHandler() {
     }
   });
 }
+  
+
 
 function wrongAnswerHandler() {
   let money = JSON.parse(localStorage.getItem("GAME_MILLIONAIRE")).Money;
@@ -155,3 +163,16 @@ function ResetGame() {
 }
 
 startGame();
+
+let number = 30;
+function Countdown(){
+  number--;
+  if(number != 0){
+    
+  timeCount.innerHTML = number;
+    setTimeout("Countdown()", 1000);
+  }else{
+    timeCount.innerHTML = "Hết giờ!";
+  }
+}
+Countdown();
