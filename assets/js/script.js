@@ -1,5 +1,5 @@
 import { beginMusic, loadedMusic, endMusic } from "./musicHandle.js";
-import CountTime from "./countTime.js";
+import setConfig from "./util.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -19,8 +19,6 @@ let questionElement = $("#question");
 let answerBox = $(".answer__box");
 let pinMoneys = $$(".pin-money__item");
 let modalNoti = $(".modal-notification");
-let modalContent = $(".modal__content");
-let timeCount = $(".time-number");
 
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
@@ -58,13 +56,19 @@ function playHandler(nameUser) {
       e.preventDefault();
     }
   });
+
+  $(".backBtn").addEventListener("click", () => {
+    modalNoti.classList.remove("show");
+
+    welcomeSection.classList.remove("hide");
+    playSection.classList.add("hide");
+  });
 }
 
 function showQuestion(questions) {
   // Show question
   questionElement.innerHTML = questions.question;
   showAnswer(questions);
-  CountTime(timeCount, 1000);
 }
 
 function showAnswer(questions) {
@@ -126,12 +130,8 @@ function jumpLevelHandler() {
 function wrongAnswerHandler() {
   let money = JSON.parse(localStorage.getItem("GAME_MILLIONAIRE")).Money;
   modalNoti.classList.add("show");
-  console.log(modalNoti.classList.length);
 
-  modalContent.innerHTML = `<h3>Rất Tiếc! Bạn đã Thua :(</h3>
-  <p class='message' >Bạn ra về với số tiền ${money}$</p>
-  <button class='btn btn-primary' onclick='${ResetGame()}'>Quay về màn chính</button>
-  `;
+  $(".message").innerHTML = `Bạn thua cuộc! Bạn ra về với ${money}$`;
 }
 
 function userHandler() {
@@ -146,15 +146,6 @@ function setStatus(element, correct) {
   correct
     ? element.classList.add("blink-btn")
     : element.classList.add("wrong-btn");
-}
-
-function ResetGame() {
-  setTimeout(() => {
-    modalNoti.classList.remove("show");
-
-    welcomeSection.classList.remove("hide");
-    playSection.classList.add("hide");
-  }, 5000);
 }
 
 startGame();

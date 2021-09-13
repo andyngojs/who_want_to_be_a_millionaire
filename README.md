@@ -1,4 +1,4 @@
-# Game Who Want To Be A Millionaire - DobeeTeam
+# Game Who Want To Be A Millionaire
 
 ## Member:
 
