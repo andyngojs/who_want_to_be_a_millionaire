@@ -23,7 +23,7 @@ let modalNoti = $(".modal-notification");
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
-  // beginMusic(bgMusic);
+  beginMusic(bgMusic);
   playHandler();
   userHandler();
 }
