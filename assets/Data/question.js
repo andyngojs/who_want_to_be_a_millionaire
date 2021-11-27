@@ -32,7 +32,7 @@ const questions = [
       "C. Nguyễn Kỳ Anh",
       "D. A.D Đông Ngô",
     ],
-    correct: 3,
+    correct: 2,
   },
   {
     question: "Us Open là giải đấu tennis được tổ chức ở quốc gia nào?",

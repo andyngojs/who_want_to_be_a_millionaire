@@ -19,11 +19,12 @@ let questionElement = $("#question");
 let answerBox = $(".answer__box");
 let pinMoneys = $$(".pin-money__item");
 let modalNoti = $(".modal-notification");
+let secondNumber = $(".second-number");
 
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
-  // beginMusic(bgMusic);
+  beginMusic(bgMusic);
   playHandler();
   userHandler();
 }
@@ -65,10 +66,21 @@ function playHandler(nameUser) {
   });
 }
 
+// let secondCount = 30;
+// function timeCount() {
+//   const timeInterval = setInterval(async () => {
+//     await secondCount--;
+//     console.log('[time count]:' + secondCount );
+//     secondNumber.innerText = secondCount;
+//   }, 1000);
+//   timeInterval();
+// }
+
 function showQuestion(questions) {
   // Show question
   questionElement.innerHTML = questions.question;
   showAnswer(questions);
+  // timeCount();
 }
 
 function showAnswer(questions) {

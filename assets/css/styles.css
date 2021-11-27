@@ -9,7 +9,6 @@
 }
 
 /* RESET CSS */
-
 * {
   padding: 0;
   margin: 0;
@@ -214,11 +213,12 @@ body {
   width: 10%;
 }
 
-.time-count .time-number {
+.time-count .second-number {
   color: var(--white);
   font-size: 1.6rem;
   font-weight: 700;
   text-align: center;
+  margin-left: 6px;
 }
 
 .container {
