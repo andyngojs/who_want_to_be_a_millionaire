@@ -116,7 +116,7 @@ body {
 
 .footer {
   position: relative;
-  bottom: -300px;
+  bottom: -200px;
 }
 
 .copyright-txt {
@@ -147,7 +147,7 @@ body {
   left: 26%;
   right: -30%;
 
-  background-color: var(--white);
+  background-color: var(--correct-btn);
   width: 50%;
   height: 50%;
 

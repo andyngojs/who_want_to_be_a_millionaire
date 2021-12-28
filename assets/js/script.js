@@ -21,6 +21,8 @@ let pinMoneys = $$(".pin-money__item");
 let modalNoti = $(".modal-notification");
 let secondNumber = $(".second-number");
 
+
+
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
@@ -35,17 +37,17 @@ function playHandler(nameUser) {
     modal.classList.add("show");
   });
 
+  //Nhấn vào nút bắt đầu:ẩn giao diện chơi ngay,hiện giao diện chính,ẩn giao diện đăng nhập 
   startBtn.addEventListener("click", (e) => {
     if (nameUser) {
       welcomeSection.classList.add("hide");
       playSection.classList.remove("hide");
       modal.classList.remove("show");
+      
 
       // Handle User Name
       setConfig("Name", nameUser);
-      const namePlayer = JSON.parse(
-        localStorage.getItem("GAME_MILLIONAIRE")
-      ).Name;
+      const namePlayer = JSON.parse(localStorage.getItem("GAME_MILLIONAIRE")).Name;
       $(".name-user").innerHTML = namePlayer;
 
       // Handle show question
@@ -66,21 +68,22 @@ function playHandler(nameUser) {
   });
 }
 
-// let secondCount = 30;
-// function timeCount() {
-//   const timeInterval = setInterval(async () => {
-//     await secondCount--;
-//     console.log('[time count]:' + secondCount );
-//     secondNumber.innerText = secondCount;
-//   }, 1000);
-//   timeInterval();
-// }
+   let secondCount = 30;
+   function timeCount() {
+     const timeInterval = setInterval(async () => {
+      await secondCount--;
+     console.log('[time count]:' + secondCount );
+     secondNumber.innerText = secondCount;
+   }, 1000);
+   timeInterval();
+ }
+
 
 function showQuestion(questions) {
   // Show question
   questionElement.innerHTML = questions.question;
   showAnswer(questions);
-  // timeCount();
+   //timeCount();
 }
 
 function showAnswer(questions) {
