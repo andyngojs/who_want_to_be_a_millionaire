@@ -20,9 +20,6 @@ let answerBox = $(".answer__box");
 let pinMoneys = $$(".pin-money__item");
 let modalNoti = $(".modal-notification");
 let secondNumber = $(".second-number");
-
-
-
 let shuffledQuestions, currentQuestionIndex, correctCurrent;
 
 function startGame() {
@@ -36,24 +33,18 @@ function playHandler(nameUser) {
     beginMusic(startMusic);
     modal.classList.add("show");
   });
-
-  //Nhấn vào nút bắt đầu:ẩn giao diện chơi ngay,hiện giao diện chính,ẩn giao diện đăng nhập 
   startBtn.addEventListener("click", (e) => {
     if (nameUser) {
       welcomeSection.classList.add("hide");
       playSection.classList.remove("hide");
       modal.classList.remove("show");
-      
-
       // Handle User Name
       setConfig("Name", nameUser);
       const namePlayer = JSON.parse(localStorage.getItem("GAME_MILLIONAIRE")).Name;
       $(".name-user").innerHTML = namePlayer;
-
       // Handle show question
       shuffledQuestions = questions.sort(() => Math.random() - 0.15);
       currentQuestionIndex = 0;
-
       setNextQuestion();
     } else {
       e.preventDefault();
@@ -62,28 +53,22 @@ function playHandler(nameUser) {
 
   $(".backBtn").addEventListener("click", () => {
     modalNoti.classList.remove("show");
-
     welcomeSection.classList.remove("hide");
     playSection.classList.add("hide");
   });
 }
-
-   let secondCount = 30;
-   function timeCount() {
-     const timeInterval = setInterval(async () => {
-      await secondCount--;
-     console.log('[time count]:' + secondCount );
-     secondNumber.innerText = secondCount;
-   }, 1000);
-   timeInterval();
- }
-
-
+//    let secondCount = 30;
+//    function timeCount() {
+//      const timeInterval = setInterval(async () => {
+//       await secondCount--;
+//      console.log('[time count]:' + secondCount );
+//      secondNumber.innerText = secondCount;
+//    }, 1000);
+//    timeInterval();
+//  }
 function showQuestion(questions) {
-  // Show question
   questionElement.innerHTML = questions.question;
   showAnswer(questions);
-   //timeCount();
 }
 
 function showAnswer(questions) {
@@ -91,7 +76,6 @@ function showAnswer(questions) {
     return `<div class="btn" id="answer_1" data-correct=${index}>${item}</div>`;
   });
   answerBox.innerHTML = htmls.join("");
-
   correctCurrent = questions.correct;
 }
 
@@ -105,11 +89,10 @@ function selectAnswer() {
         beginMusic(correctMusic);
         isCorrect = true;
         setStatus(item, isCorrect);
-
         setTimeout(() => {
           currentQuestionIndex++;
           setNextQuestion();
-        }, 4000);
+        }, 2000);
       } else {
         beginMusic(wrongMusic);
         setStatus(item, isCorrect);
@@ -130,7 +113,6 @@ function setNextQuestion() {
 function jumpLevelHandler() {
   let moneyArr = [...pinMoneys];
   let newArrReverse = moneyArr.reverse();
-
   newArrReverse.forEach((item, index) => {
     if (index == currentQuestionIndex) {
       item.classList.add("active");
@@ -145,7 +127,6 @@ function jumpLevelHandler() {
 function wrongAnswerHandler() {
   let money = JSON.parse(localStorage.getItem("GAME_MILLIONAIRE")).Money;
   modalNoti.classList.add("show");
-
   $(".message").innerHTML = `Bạn thua cuộc! Bạn ra về với ${money}$`;
 }
 
