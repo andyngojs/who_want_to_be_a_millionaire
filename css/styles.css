@@ -41,7 +41,7 @@ body {
   width: 100vw;
   overflow: hidden;
 
-  background-image: url("../img/bg_1.png");
+  background-image: url("../assets/img/bg_1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -147,14 +147,11 @@ body {
   left: 26%;
   right: -30%;
 
-  background-color: var(--correct-btn);
+  background-color: var(--white);
   width: 50%;
   height: 50%;
-
   border-radius: 2.8rem;
-
   padding: 2.4rem;
-
   transform: scale(0);
   transition: transform 0.2s ease;
 }
