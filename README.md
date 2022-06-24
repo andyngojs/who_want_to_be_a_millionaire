@@ -1,5 +1,10 @@
 # Game Who Want To Be A Millionaire
 
+## Note [2022 - 06 - 25]
+
+This is first version with Javascript Vanilla and develop with 3 my friends. 
+
+
 ## Member: <br>
 - [Dong Ngo](https://github.com/andyngojs) <br>
 - [Duc Tran](https://github.com/tranmanhduc-mg) <br>
