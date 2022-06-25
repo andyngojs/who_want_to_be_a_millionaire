@@ -1,0 +1,40 @@
+:root {
+  --primary-color: #1746b2;
+  --secondary-color: #c92d8e;
+  --white: #ffffff;
+  --black: #000000;
+  --text: #333333;
+  --correct-btn: #26bd53;
+  --wrong-btn: #d62413;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
